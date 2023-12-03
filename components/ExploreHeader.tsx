@@ -1,19 +1,39 @@
-import { View, StyleSheet, Text } from "react-native";
-import React from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { Link } from "expo-router";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { View, Text, SafeAreaView, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import { useRef, useState } from 'react';
+import { Ionicons } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
+import { Link } from 'expo-router';
 
 const categories = [
-  {
-    name: "Cabins",
-    icon: "house-siding",
-  },
-  {
-    name: "Tiny homes",
-    icon: "home",
-  },
-];
+    {
+      name: 'Tiny homes',
+      icon: 'home',
+    },
+    {
+      name: 'Cabins',
+      icon: 'house-siding',
+    },
+    {
+      name: 'Trending',
+      icon: 'local-fire-department',
+    },
+    {
+      name: 'Play',
+      icon: 'videogame-asset',
+    },
+    {
+      name: 'City',
+      icon: 'apartment',
+    },
+    {
+      name: 'Beachfront',
+      icon: 'beach-access',
+    },
+    {
+      name: 'Countryside',
+      icon: 'nature-people',
+    },
+  ];
 
 export default function ExploreHeader() {
   return (
@@ -21,9 +41,9 @@ export default function ExploreHeader() {
       <View style={styles.container}>
         <View style={styles.actionRow}>
             <Link href={'/(modals)/booking'}>Booking</Link>
-            <TouchableOpacity>
-                <Text>filter ...</Text>
-            </TouchableOpacity>
+            <TouchableOpacity style={styles.filterBtn}>
+            <Ionicons name="options-outline" size={24} />
+          </TouchableOpacity>
         </View>
       </View>
     </SafeAreaView>
@@ -42,6 +62,7 @@ const styles = StyleSheet.create({
           width: 1,
           height: 10,
         },
+        paddingTop: 60
       },
       actionRow: {
         flexDirection: 'row',
@@ -50,4 +71,10 @@ const styles = StyleSheet.create({
         paddingHorizontal: 24,
         paddingBottom: 16,
       },
+      filterBtn: {
+        padding: 10,
+        borderWidth: 1,
+        borderColor: '#A2A0A2',
+        borderRadius: 24,
+      }
 });
