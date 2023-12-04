@@ -10,7 +10,5 @@ export default function Explore() {
       <Stack.Screen options={{ header: () => <ExploreHeader /> }} />
      
     </View>
-
   );
 }
-wh
