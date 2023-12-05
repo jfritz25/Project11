@@ -1,7 +1,8 @@
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-export default function Listings({category}) {
+
+export default function Listings({category, onSelect}) {
   const listings = [
     { id: 1, title: 'Cozy Cabin in the Woods', price: '$100/night', category: 'Cabins' },
     { id: 2, title: 'Luxury Cabin with Mountain View', price: '$120/night', category: 'Cabins' },
@@ -22,15 +23,18 @@ export default function Listings({category}) {
 
   const filteredListings = listings.filter(listing => listing.category === category);
 
-    return (
-      <View>
-        <Text>Listings</Text>
-        {filteredListings.map((listing) => (
-          <View key={listing.id}>
-            <Text>{listing.title}</Text>
-            <Text>{listing.price}</Text>
-          </View>
-        ))}
-      </View>
-    );
+   const handleListingSelect = (listing) => {
+      console.log(`Selected listing: ${listing.title}`);
+    };
+      return (
+        <View>
+          <Text>Listings</Text>
+          {filteredListings.map((listing) => (
+            <TouchableOpacity key={listing.id} onPress={() => onSelect(listing)}>
+              <Text style={{ fontSize: 20 }}>{listing.title}</Text>
+              <Text>{listing.price}</Text>
+            </TouchableOpacity>
+          ))}
+        </View>
+      );
 }

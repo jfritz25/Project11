@@ -1,12 +1,14 @@
 import React from "react";
-import { Stack } from "expo-router";
-import Listings from "../../components/Listings";
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import { View, TextInput, TouchableOpacity, ScrollView, Text, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import {FontAwesome5} from '@expo/vector-icons';
 import {MaterialIcons} from '@expo/vector-icons';
 
-function ExploreHeader() {
+
+
+function ExploreHeader({ navigation }) {
   const [searchText, setSearchText] = React.useState(null);
   const [selectedCategory, setSelectedCategory] = React.useState(null);
 
@@ -14,9 +16,13 @@ function ExploreHeader() {
     console.log(searchText);
   };
 
-   const handleCategorySelect = (category) => {
-      setSelectedCategory(category);
-    };
+  const handleCategorySelect = (category) => {
+    setSelectedCategory(category);
+  };
+
+  const handleListingSelect = (listing) => {
+    navigation.navigate('ListingDetails', { listing });
+  };
 
   return (
     <View>
@@ -109,11 +115,15 @@ const styles = StyleSheet.create({
   },
 });
 
+const Stack = createStackNavigator();
+
 export default function Explore() {
   return (
-    <View style={{ flex: 1 }}>
-      <ExploreHeader />
-      {/* Rest of your screen components go here */}
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Explore">
+        <Stack.Screen name="Explore" component={ExploreHeader} />
+        <Stack.Screen name="ListingDetails" component={ListingDetails} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
