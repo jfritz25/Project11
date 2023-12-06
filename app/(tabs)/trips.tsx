@@ -9,13 +9,13 @@ export default function Trips() {
 
   useEffect(() => {
     const listingsCollection = collection(db, 'reservations');
-    const unsubscribe = onSnapshot(listingsCollection, (snapshot) => {
+    const getData = onSnapshot(listingsCollection, (snapshot) => {
       const listingsList = snapshot.docs.map(doc => doc.data());
       setListings(listingsList);
     });
 
     // Clean up the listener when the component unmounts
-    return () => unsubscribe();
+    return () => getData();
   }, []);
 
   return (

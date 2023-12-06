@@ -15,6 +15,15 @@ function ExploreHeader({ navigation }) {
   const [selectedCategory, setSelectedCategory] = React.useState(null);
   const [isFocused, setIsFocused] = useState(false);
 
+
+  const categoryTextStyle = (category) => {
+    if (category === selectedCategory) {
+      return [styles.categoryText, styles.selectedCategory];
+    } else {
+      return styles.categoryText;
+    }
+  };
+
   const handleSearch = () => {
     console.log(searchText);
   };
@@ -49,39 +58,39 @@ function ExploreHeader({ navigation }) {
       </View>
 
       <ScrollView horizontal style={styles.categoryContainer}>
-        <TouchableOpacity style={styles.categoryButton} onPress={() => handleCategorySelect('Tiny Homes')} >
-            <MaterialIcons name='home' size={40} color="black" />
-            <Text style={styles.categoryText}>Tiny Homes</Text>
-        </TouchableOpacity>
+        <TouchableOpacity style={styles.categoryButton} onPress={() => handleCategorySelect('Tiny Homes')}>
+              <MaterialIcons name='home' size={40} color="black" />
+              <Text style={categoryTextStyle('Tiny Homes')}>Tiny Homes</Text>
+         </TouchableOpacity>
 
         <TouchableOpacity style={styles.categoryButton} onPress={() => handleCategorySelect('Cabins')} >
           <Ionicons name="ios-home" size={40} color="black" />
-          <Text style={styles.categoryText}>Cabins</Text>
+          <Text style={categoryTextStyle('Cabins')}>Cabins</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.categoryButton} onPress={() => handleCategorySelect('Trending')} >
           <FontAwesome5 name="fire" size={40} color="black" />
-          <Text style={styles.categoryText}>Trending</Text>
+          <Text style={categoryTextStyle('Trending')}>Trending</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.categoryButton} onPress={() => handleCategorySelect('Play')} >
           <FontAwesome5 name="gamepad" size={40} color="black" />
-          <Text style={styles.categoryText}>Play</Text>
+          <Text style={categoryTextStyle('Play')}>Play</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.categoryButton} onPress={() => handleCategorySelect('City')} >
           <FontAwesome5 name="city" size={40} color="black" />
-          <Text style={styles.categoryText}>City</Text>
+          <Text style={categoryTextStyle('City')}>City</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.categoryButton} onPress={() => handleCategorySelect('Beachfront')} >
           <MaterialIcons name="beach-access" size={40} color="black" />
-          <Text style={styles.categoryText}>Beachfront</Text>
+          <Text style={categoryTextStyle('Beachfront')}>Beachfront</Text>
         </TouchableOpacity>
 
          <TouchableOpacity style={styles.categoryButton} onPress={() => handleCategorySelect('Country Side')} >
           <MaterialIcons name="nature-people" size={40} color="black" />
-          <Text style={styles.categoryText}>Country Side</Text>
+          <Text style={categoryTextStyle('Country Side')}>Country Side</Text>
         </TouchableOpacity>
 
       </ScrollView>
@@ -136,6 +145,9 @@ const styles = StyleSheet.create({
     marginTop: 5,
     color: 'black',
   },
+  selectedCategory: {
+      textDecorationLine: 'underline',
+    },
 });
 
 const Stack = createStackNavigator();
