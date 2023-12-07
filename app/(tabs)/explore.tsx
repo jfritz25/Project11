@@ -39,7 +39,9 @@ function ExploreHeader({ navigation }) {
   return (
     <View>
       <View style={styles.container}>
+      <TouchableOpacity>
       <Ionicons name="ios-search" size={30} color="gray" style={styles.icon} />
+      </TouchableOpacity>
       <TextInput
             style={styles.input}
             onChangeText={setSearchText}

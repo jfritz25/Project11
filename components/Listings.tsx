@@ -54,7 +54,9 @@ export default function Listings({category, ids}) {
                <Image source={{uri: listing.url}}
                       style={{width: '100%', height: 200}}
                />
-               <AntDesign name="hearto" size={24} color="white" style={{position: 'absolute', top: 10, right: 10}} />
+              <TouchableOpacity style={{position: 'absolute', top: 10, right: 10}}>
+                       <AntDesign name="hearto" size={30} color="white"  />
+              </TouchableOpacity>
              </View>
            </TouchableOpacity>
          ))}

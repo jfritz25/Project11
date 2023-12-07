@@ -1,7 +1,9 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet, Image } from 'react-native';
+import { View, Text, Button, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { collection, doc, setDoc } from "firebase/firestore";
 import { db } from '../FirebaseConfig';
+import { AntDesign, FontAwesome5, Feather } from '@expo/vector-icons';
+
 
 export default function ListingDetails({ route }) {
   const { listing } = route.params;
@@ -28,10 +30,21 @@ export default function ListingDetails({ route }) {
     <View style={styles.container}>
       <Text style={styles.title}>{listing.title}</Text>
       <Text style={styles.price}>{listing.price}</Text>
-      <Image source={{uri: listing.url}}
-                 style={{width: 200, height: 200}}
-               />
-      <Button title="Reserve" onPress={handleReserve} />
+     <View style={{position: 'relative'}}>
+       <Image source={{uri: listing.url}}
+              style={{width: 420, height: 420}}
+       />
+       <TouchableOpacity style={{position: 'absolute', top: 10, right: 10}}>
+         <AntDesign name="hearto" size={40} color="white"  />
+       </TouchableOpacity>
+       <TouchableOpacity style={{position: 'absolute', top: 10, right: 70}}>
+         <Feather name="share" size={40} color="white"  />
+       </TouchableOpacity>
+     </View>
+
+      <TouchableOpacity style={styles.button} onPress={handleReserve}>
+      <Text style={styles.buttonText}>Reserve</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -39,7 +52,7 @@ export default function ListingDetails({ route }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'top',
     alignItems: 'center',
   },
   title: {
@@ -50,5 +63,28 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: 'gray',
   },
+   button: {
+       position: 'absolute',
+       bottom: 0,
+       right: 0,
+       backgroundColor: 'red',
+       borderRadius: 10,
+       padding: 10,
+       shadowColor: "#000",
+       width: 200,
+       height: 50,
+       shadowOffset: {
+         width: 0,
+         height: 2,
+       },
+       shadowOpacity: 0.25,
+       shadowRadius: 3.84,
+       elevation: 5,
+     },
+     buttonText: {
+       color: 'white',
+       textAlign: 'center',
+       fontSize: 24,
+     }
 });
 
