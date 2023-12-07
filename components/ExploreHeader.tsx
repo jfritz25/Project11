@@ -1,39 +1,9 @@
+//Came from starter code
 import { View, Text, SafeAreaView, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { useRef, useState } from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Link } from 'expo-router';
-
-const categories = [
-    {
-      name: 'Tiny homes',
-      icon: 'home',
-    },
-    {
-      name: 'Cabins',
-      icon: 'house-siding',
-    },
-    {
-      name: 'Trending',
-      icon: 'local-fire-department',
-    },
-    {
-      name: 'Play',
-      icon: 'videogame-asset',
-    },
-    {
-      name: 'City',
-      icon: 'apartment',
-    },
-    {
-      name: 'Beachfront',
-      icon: 'beach-access',
-    },
-    {
-      name: 'Countryside',
-      icon: 'nature-people',
-    },
-  ];
 
 export default function ExploreHeader() {
   return (

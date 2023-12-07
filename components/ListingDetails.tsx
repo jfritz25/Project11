@@ -4,14 +4,14 @@ import { collection, doc, setDoc } from "firebase/firestore";
 import { db } from '../FirebaseConfig';
 import { AntDesign, FontAwesome5, Feather } from '@expo/vector-icons';
 
-
-export default function ListingDetails({ route }) {
+// This file is when an individual listing is selected and the user has the chance to reserve the booking
+export default function ListingDetails({ route }) { //Takes the route which is the navigation params
   const { listing } = route.params;
 
   const handleReserve = () => {
     const reservationsRef = collection(db, 'reservations');
     const newReservationRef = doc(reservationsRef, String(listing.id));
-
+    //Adds reserved listing to firestore
     setDoc(newReservationRef, {
       listingId: listing.id,
       listingTitle: listing.title,
@@ -25,7 +25,7 @@ export default function ListingDetails({ route }) {
       console.error('Error making reservation: ', error);
     });
   };
-
+//Displays the layout for the listing details page with a reserve button
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{listing.title}</Text>

@@ -3,7 +3,7 @@ import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { AntDesign } from '@expo/vector-icons';
 
-
+// Holds all of the generated listings
 export default function Listings({category, ids}) {
   const listings = [
     { id: 1, title: 'Cozy Cabin in the Woods', url:'https://media.gettyimages.com/id/93463536/photo/log-cabin-in-the-forest.jpg?s=612x612&w=gi&k=20&c=11biv17nKCSCYw3zJ96oF7092sbjdfHA_xtqeSACHV0=' , price: '$100/night', category: 'Cabins' },
@@ -29,7 +29,7 @@ export default function Listings({category, ids}) {
     { id: 21, title: 'Charming Country Home with Orchard', url:'https://media.gettyimages.com/id/1269776313/photo/suburban-house.jpg?s=612x612&w=gi&k=20&c=r_hw-YI1AleWv2N6SPyz2vPJQCDpEFflS55u3uQqU5M=' , price: '$115/night', category: 'Country Side' },
 
   ];
-
+// Filters listings based on the selected category on the explore page
  let filteredListings = listings;
 
   if (ids) {
@@ -37,7 +37,7 @@ export default function Listings({category, ids}) {
   } else if (category) {
     filteredListings = listings.filter(listing => listing.category === category);
   }
-  const navigation = useNavigation();
+  const navigation = useNavigation(); //Establishes navigation and navigates to display only the properties that belong to selected category
 
   const handleListingSelect = (listing) => {
     console.log(`Selected listing: ${listing.title}`);
@@ -45,6 +45,7 @@ export default function Listings({category, ids}) {
 
   }
       return (
+      //Format of the list of properties in the explore page
        <ScrollView style={{width: '100%' }}>
          {filteredListings.map((listing) => (
            <TouchableOpacity key={listing.id} onPress={() => handleListingSelect(listing)} style={{width: '100%' }}>

@@ -9,13 +9,13 @@ import ListingDetails from '../../components/ListingDetails';
 import Listings from '../../components/Listings'
 
 
-
+//Explore page
 function ExploreHeader({ navigation }) {
   const [searchText, setSearchText] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState(null);
   const [isFocused, setIsFocused] = useState(false);
 
-
+  //Underlines selected category
   const categoryTextStyle = (category) => {
     if (category === selectedCategory) {
       return [styles.categoryText, styles.selectedCategory];
@@ -23,19 +23,17 @@ function ExploreHeader({ navigation }) {
       return styles.categoryText;
     }
   };
-
-  const handleSearch = () => {
-    console.log(searchText);
-  };
-
+ //Sets category
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
   };
 
+  //Navigates to listing detials when a listing is selected
   const handleListingSelect = (listing) => {
     navigation.navigate('ListingDetails', { listing });
   };
 
+  //Defines layout of entire page including search bar, buttons, and container for the listings
   return (
     <View>
       <View style={styles.container}>
@@ -101,7 +99,7 @@ function ExploreHeader({ navigation }) {
     </View>
   );
 }
-
+//Sets styles for everything
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
@@ -153,7 +151,7 @@ const styles = StyleSheet.create({
 });
 
 const Stack = createStackNavigator();
-
+//Navigation that handles the navigation between explore page and listing details
 export default function Explore() {
   return (
     <NavigationContainer independent = {true}>
