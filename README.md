@@ -44,19 +44,18 @@ The following **required** functionality is completed:
 Watch a demonstration of the different options when working with the notes app in the gif available on Github
 Here's a walkthrough of a few translations:
 <br>
-![Recording in GIF of Walk Through](https://github.com/jfritz25/Project8ThisIsTheOne/blob/master/app/src/main/java/com/example/project8/convert.gif)
+![Recording in GIF of Walk Through](https://github.com/jfritz25/Project11/blob/main/Project%2011%20Recording.gif)
 
 GIF created with [CloudConvert](https://cloudconvert.com/).
 
 UI Challenges:
-- Connecting the link as clickable passing the data in from the JSON file and handling it correctly
-- UI was relatively simple so not many errors followed
+- Coming up with the images and displaying different ones for each reservation
+- Having the "Anytime / Everywhere" pop-up and use the auto-focus to go away when clicked
 
 Backend Challenges:
-- Calling the API point
-- Data Binding stopped working when we attempted the recycler view
-- Working with the format through indexing was more of a learning curve but easy once we got it down
+- Adapting to a new programing language
 
+  
 ## License
 
     Copyright [2023] [Ashley Steitz, Jacob Fritz]
