@@ -98,7 +98,7 @@ if (!user) {
           <TextInput
             style={{ height: 40, borderColor: 'gray', borderWidth: 1, marginBottom: 20 }}
              onChangeText={text => {
-                setFirstName(text);
+                setLastName(text);
                 updateUserProfile(user.email, firstName, text);
               }}
             value={lastName}
