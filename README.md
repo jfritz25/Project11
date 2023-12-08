@@ -31,11 +31,10 @@ The following **required** functionality is completed:
 **Demonstrated**
 <br>
 **START**
-* [SEARCH] [Titanic] -> [EVERYTHING WAS POPULATED] -> [Clicked Share and the options came up] -> [Link was followed to IMDB page] -> [SEND FEEBACK was pressed] -> [Opened GMAIL and sent off a message] -> [Great work! sent to jamfritz@iu.edu] -> [Brought back to movie screen] -> [back to main screen]
-* [SEARCH] [Parent Trap] -> [No photo for this movie] -> [All stats came up] -> [back to main page]
-* [SEARCH] [Pulp Fiction] -> [ALL ITEMS CAME UP]
-<br>
-
+* [Login-Page] -> [Sign-Up] -> [jamfritz@iu.edu] -> [ilove323]
+* [HomePage] -> [Click on Cabins] -> [Luxury Cabin 
+with Mountain View] -> reserve
+* [Trips] -> [Look at reservations]
 **END**
 
 
