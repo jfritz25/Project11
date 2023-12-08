@@ -3,26 +3,23 @@
 
 ---
 <span style="font-size: smaller;"><strong> Description </strong> </span>
-In our Project 8 we called the IMDB API to search for Movies and retrieve the data (if there is any), then populates an XML file. We also allow the user to share the icon, visit the IMDP page themselves, and send us feedback.
-<br>
+In Project 11 we utilized React to create a cross-platform app that functions like  AirBnB and adopts similar functions. We utilized Expo to run our app and this will be demonstrated in the recording. 
 
-This app allows for a user to:
-- Search for a movie
-- See the stats (rating, ranking, runtime, etc)
-- Share a link
-- Visit the IMDB page via link
+We Addressed the following Functionality:
+- The main layout of the app has five tabs
+- The profile tab only has a Log in button.
+- Clicking the Log in button opens an overlay page presenting several login/signup options.
+- After entering the email and clicking continue, you will navigate to another overlay page where you can enter your password and either login or create an account.
+- Use Firebase authentication for sign up, login, and logout functionalities.
+- The profile page displays the customer’s name, email, profile picture, and registration date.
+- The profile page also has a logout button
+- Clicking a title navigates to a page displaying the details of the property with a button to reserve the property.
+- Clicking the reserve button saves an entry in the Firebase store.
+- The trip tab displays the list of reserved places.
 
-To begin we integrated an API call to the IMDB page in order to request information on a Movie. If the request
-was valid, we parsed the data from the JSON file and displayed the values in an XML file. Through this process we 
-allowed the user to share this data or click the link to take them to the IMDB page.
 <br>
 <br>
-When taken to the main page, you are able to enter a movie title, upon hitting search the app takes you to a page that 
-holds the information, the poster, and the ability to share the movie. Additionally, if you feel you can also submit feedback by pressing
-the button up in the ribbon where you will be taken to Gmail or any other messaging platform you have installed on your emulator.
-<br>
-<br>
-In the case that you submit an invalid movie title, the contents will not populate and you will be told that the IMDB page does not support that movie.
+When taken to the main page, we allow for our users to navigate between rental reservation types, check their reservations/trips, and view their profile.
 
 
 
