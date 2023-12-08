@@ -31,7 +31,7 @@ The following **required** functionality is completed:
 **Demonstrated**
 <br>
 **START**
-* [Login-Page] -> [Sign-Up] -> [jamfritz@iu.edu] -> [ilove323]
+* [Login-Page] -> [Sign-Up] -> [jamfritz@iu.edu] -> [Jacob] -> [Fritz] -> [ilove323]
 * [HomePage] -> [Click on Cabins] -> [Luxury Cabin 
 with Mountain View] -> reserve
 * [Trips] -> [Look at reservations]
