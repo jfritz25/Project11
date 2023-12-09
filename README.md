@@ -25,6 +25,8 @@ When taken to the main page, we allow our users to navigate between rental reser
 This project is published via [Expo](https://expo.dev/accounts/asteitz/projects/week15/updates/a8721841-de0f-4186-8973-2140b4719fc4).
 As seen here
 ![screenshot](https://github.com/jfritz25/Project11/blob/main/screenshot.png)
+![published](https://github.com/jfritz25/Project11/blob/main/published.png)
+
 ## Functionality
 '*' indicates tested in GIF  
 The following **required** functionality is completed:
