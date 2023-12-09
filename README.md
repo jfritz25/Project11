@@ -20,6 +20,8 @@ We Addressed the following Functionality:
 <br>
 <br>
 When taken to the main page, we allow for our users to navigate between rental reservation types, check their reservations/trips, and view their profile.
+This project is published via [Expo](https://expo.dev/accounts/asteitz/projects/week15/updates/a8721841-de0f-4186-8973-2140b4719fc4)
+
 
 
 
