@@ -12,7 +12,7 @@ We addressed the following functionality:
 - The main layout of the app has five tabs.
 - The profile tab only has a Login button.
 - Clicking the Login button opens an overlay page presenting several login/signup options.
-- After entering the email and clicking continue, you will navigate to another overlay page where you can enter your password and either login or create an account.
+- After entering the email and clicking continue, you will navigate to another overlay page where you can enter your password and either log in or create an account.
 - Use Firebase authentication for sign-up, login, and logout functionalities.
 - The profile page displays the customer’s name, email, profile picture, and registration date.
 - The profile page also has a logout button.
@@ -20,7 +20,7 @@ We addressed the following functionality:
 - Clicking the reserve button saves an entry in the Firebase store.
 - The trip tab displays the list of reserved places.
 
-When taken to the main page, we allow our users to navigate between rental reservation types, check their reservations/trips, and view their profile.
+When taken to the main page, we allow our users to navigate between rental reservation types, check their reservations/trips, and view their profiles.
 
 This project is published via [Expo](https://expo.dev/accounts/asteitz/projects/week15/updates/a8721841-de0f-4186-8973-2140b4719fc4).
 As seen here
@@ -39,7 +39,7 @@ The following **required** functionality is completed:
 ---
 
 ## Video Walkthrough
-Watch a demonstration of the different options when working with the notes app in the gif available on Github.
+Watch a demonstration of the different options when working with the notes app in the gif available on GitHub.
 Here's a walkthrough of a few translations:
 ![Recording in GIF of Walk Through](https://github.com/jfritz25/Project11/blob/main/Project%2011%20Recording.gif)
 
